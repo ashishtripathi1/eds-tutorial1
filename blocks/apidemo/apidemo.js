@@ -7,4 +7,4 @@ export default async function decorate(block) {
  	console.log("This is printed here");
   
   }
- }
+ 
