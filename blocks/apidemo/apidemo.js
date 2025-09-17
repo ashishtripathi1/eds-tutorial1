@@ -34,10 +34,20 @@ async function fetchProtectedData() {
   return data;
 }
 
+
+
+async function fetchWithCookie() {
+  const response = await fetch('https://admin.hlx.page/config/ashishtripathi1/sites.json', {
+    method: 'GET',
+    credentials: 'include' // crucial for cross-origin, for same-origin not required but is good practice
+  });
+  const data = await response.json();
+  return data;
+}
+
 // Usage
-fetchProtectedData().then(data => {
+fetchWithCookie().then(data => {
   console.log(data);
 }).catch(error => {
   console.error(error);
 });
- 
