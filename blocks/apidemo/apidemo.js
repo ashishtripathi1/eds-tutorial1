@@ -32,6 +32,7 @@ fetch(url)
       const information = metaData["1. Information"];
       const symbol = metaData["2. Symbol"];
       console.log("Information:", information);
+	  block.textContent = `Information: ${information}`;
       console.log("Symbol:", symbol);
     } else {
       console.log("Meta Data not found in the response.");
