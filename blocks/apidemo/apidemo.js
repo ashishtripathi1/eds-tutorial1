@@ -14,7 +14,7 @@
   });
   } */
 
-const url = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=30min&apikey=demo";
+const url = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=ADBE&interval=30min&apikey=Z5HPGQAVYHYGJEZ5";
 
 // Fetch data from the API
 fetch(url)
