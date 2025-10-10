@@ -34,7 +34,8 @@ export default async function decorate(block) {
           const information = metaData["1. Information"];
           const symbol = metaData["2. Symbol"];
 
-          let html = `<strong>Information:</strong> ${information}<br><strong>Symbol:</strong> ${symbol}<br><br>`;
+          let html = `<strong>Information:<strong> ${information}<br><strong>Symbol:<strong> ${symbol}<br><strong>Last Refreshed:<strong> ${refreshed}<br><strong>Interval:<strong> ${interval}<br><strong>Time Zone:<strong> ${timeZone}`;
+		
 
           if (timeSeries) {
             const entries = Object.entries(timeSeries).slice(0, 10); // top 10 records
