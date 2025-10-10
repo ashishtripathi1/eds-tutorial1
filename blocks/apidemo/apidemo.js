@@ -33,6 +33,9 @@ export default async function decorate(block) {
 	if (metaData) {
           const information = metaData["1. Information"];
           const symbol = metaData["2. Symbol"];
+		 const refreshed = metaData["3. Last Refreshed"];
+		 const interval = metaData["4. Interval"];
+		 const timeZone = metaData["5. Time Zone"];
 
           let html = `<strong>Information:<strong> ${information}<br><strong>Symbol:<strong> ${symbol}<br><strong>Last Refreshed:<strong> ${refreshed}<br><strong>Interval:<strong> ${interval}<br><strong>Time Zone:<strong> ${timeZone}`;
 		
