@@ -29,6 +29,7 @@ export default async function decorate(block) {
   .then(data => {
     console.log("API Response:", data);
 	const metaData = data["Meta Data"];
+	 const timeSeries = data["Time Series (30min)"]; 
 	if (metaData) {
           const information = metaData["1. Information"];
           const symbol = metaData["2. Symbol"];
