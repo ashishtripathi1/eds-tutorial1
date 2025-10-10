@@ -32,9 +32,12 @@ export default async function decorate(block) {
 	if (metaData) {
       const information = metaData["1. Information"];
       const symbol = metaData["2. Symbol"];
+		const refreshed = metaData["3. Last Refreshed"];
+		const interval = metaData["4. Interval"];
+		const timeZone = metaData["5. Time Zone"];
       console.log("Information:", information);
 	  //block.textContent = `Information: ${information}`;
-		block.innerHTML = `Information: ${information}<br>Symbol: ${symbol}`;
+	block.innerHTML = `Information: ${information}<br>Symbol: ${symbol}<br>Last Refreshed: ${refreshed}<br>Interval: ${interval}<br>Time Zone: ${timeZone}`;
       console.log("Symbol:", symbol);
     } else {
       console.log("Meta Data not found in the response.");
