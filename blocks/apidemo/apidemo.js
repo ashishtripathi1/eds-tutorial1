@@ -33,7 +33,8 @@ export default async function decorate(block) {
       const information = metaData["1. Information"];
       const symbol = metaData["2. Symbol"];
       console.log("Information:", information);
-	  block.textContent = `Information: ${information}`;
+	  //block.textContent = `Information: ${information}`;
+		block.textContent = `Information: ${information}\nSymbol: ${symbol}`;
       console.log("Symbol:", symbol);
     } else {
       console.log("Meta Data not found in the response.");
