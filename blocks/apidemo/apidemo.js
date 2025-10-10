@@ -14,10 +14,11 @@
   });
   } */
 
+
 const url = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=ADBE&interval=30min&apikey=Z5HPGQAVYHYGJEZ5";
 
-// Fetch data from the API
-fetch(url)
+export default async function decorate(block) {
+	fetch(url)
   .then(response => {
     // Check if response is ok (status 200)
     if (!response.ok) {
@@ -49,3 +50,6 @@ fetch(url)
   .catch(error => {
     console.error("Error fetching data:", error);
   });
+  }
+// Fetch data from the API
+
