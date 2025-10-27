@@ -12,6 +12,9 @@ import {
   loadBlocks,
   loadCSS,
   getMetadata,
+  loadSection,
+  loadSections,
+  loadCSS,
 } from './aem.js';
 
 const LCP_BLOCKS = []; // add your LCP blocks to the list
