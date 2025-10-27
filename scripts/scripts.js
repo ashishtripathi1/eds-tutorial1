@@ -163,6 +163,7 @@ async function loadEager(doc) {
     // break up possible long tasks before showing the LCP block to reduce TBT
     await new Promise((resolve) => {
       window.setTimeout(async () => {
+        console.log('windows set time done');
         // For newer AEM boilerplate, use this
         //await loadSection(main.querySelector('.section'), waitForFirstImage)
         // For older AEM boilerplate versions, use this instead
