@@ -157,7 +157,18 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
-    await waitForLCP(LCP_BLOCKS);
+    // wait for atjs to finish loading
+    await atjsPromise;
+    // break up possible long tasks before showing the LCP block to reduce TBT
+    await new Promise((resolve) => {
+      window.setTimeout(async () => {
+        // For newer AEM boilerplate, use this
+        await loadSection(main.querySelector('.section'), waitForFirstImage)
+        // For older AEM boilerplate versions, use this instead
+        // await waitForLCP(LCP_BLOCKS);
+        resolve();
+      }, 0);
+    });
   }
 
   try {
