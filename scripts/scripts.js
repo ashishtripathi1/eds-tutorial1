@@ -155,9 +155,9 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
-  console.log('before main block..');
+
   if (main) {
-     console.log('inside main block..');
+     
     decorateMain(main);
     document.body.classList.add('appear');
     // wait for atjs to finish loading
@@ -167,7 +167,7 @@ async function loadEager(doc) {
       window.setTimeout(async () => {
         console.log('windows set time done');
         // For newer AEM boilerplate, use this
-        //await loadSection(main.querySelector('.section'), waitForFirstImage)
+        await loadSection(main.querySelector('.section'), waitForFirstImage)
         // For older AEM boilerplate versions, use this instead
         // await waitForLCP(LCP_BLOCKS);
         resolve();
