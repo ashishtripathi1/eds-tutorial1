@@ -155,7 +155,9 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
+  console.log('before main block..');
   if (main) {
+     console.log('inside main block..');
     decorateMain(main);
     document.body.classList.add('appear');
     // wait for atjs to finish loading
