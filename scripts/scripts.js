@@ -164,7 +164,7 @@ async function loadEager(doc) {
     await new Promise((resolve) => {
       window.setTimeout(async () => {
         // For newer AEM boilerplate, use this
-        await loadSection(main.querySelector('.section'), waitForFirstImage)
+        //await loadSection(main.querySelector('.section'), waitForFirstImage)
         // For older AEM boilerplate versions, use this instead
         // await waitForLCP(LCP_BLOCKS);
         resolve();
